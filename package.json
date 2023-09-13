@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sample-test": "npx browserstack-node-sdk playwright test --config=./playwright.config.js",
+    "sample-test": "PLAYWRIGHT_JUNIT_OUTPUT_NAME=results.xml npx browserstack-node-sdk playwright test --config=./playwright.config.js --reporter=junit",
     "sample-local-test": "npx browserstack-node-sdk playwright test --config=./playwright.local.config.js"
   },
   "keywords": [],
