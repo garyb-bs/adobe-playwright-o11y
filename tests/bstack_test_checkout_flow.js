@@ -6,6 +6,9 @@ test('BStackDemo test checkout flow', async ({ page }) => {
 
   // sign in
   await page.click('#signin', { delay: 100 });
+
+  await percySnapshot(page, 'Login Page');
+
   await page.fill('#react-select-2-input', 'fav_user');
   await page.press('#react-select-2-input', 'Enter');
   await page.fill('#react-select-3-input', 'testingisfun99');
@@ -18,6 +21,8 @@ test('BStackDemo test checkout flow', async ({ page }) => {
   await page.click('div.float-cart__close-btn');
   await page.click('#\\32 > .shelf-item__buy-btn');
   await page.click('.buy-btn');
+
+  await percySnapshot(page, 'Checkout');
 
   // add address details
   await page.fill('#firstNameInput', 'first');
