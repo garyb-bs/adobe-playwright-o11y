@@ -1,4 +1,5 @@
 const { expect, test } = require('@playwright/test');
+const percySnapshot = require('@percy/playwright');
 
 test('BStackDemo test checkout flow', async ({ page }) => {
   // visit the site
