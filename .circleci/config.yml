@@ -2,6 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@5.0.2
   heroku: circleci/heroku@1.2.6
+  percy: percy/agent@volatile
 
 jobs:
   test: # this can be any name you want
@@ -39,3 +40,7 @@ workflows:
   adobe-pr-smoke-test:
     jobs:
       - test
+      - percy/finalize_all:
+         requires:
+           - test
+
