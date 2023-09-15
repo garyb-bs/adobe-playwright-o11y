@@ -1,11 +1,8 @@
 const { expect, test } = require('@playwright/test');
-const percySnapshot = require('@percy/playwright');
 
 test('BStackDemo test add to cart', async ({ page }) => {
   // visit the site
   await page.goto('https://bstackdemo.com/');
-
-  await percySnapshot(page, 'Add To Cart');
 
   // get name of product we want to add to cart\
   const productToAdd = await page.locator('#\\33  > p').textContent();
