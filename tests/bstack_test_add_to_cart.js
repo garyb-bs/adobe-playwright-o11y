@@ -1,4 +1,19 @@
-const { expect, test } = require('@playwright/test');
+const { test } = require('../fixtures');
+const { expect } = require('@playwright/test');
+var replace = require("replace");
+
+test.afterAll(async () => {
+  replace({
+      regex: "<td></td>",
+      replacement: "<td>https://observability.browserstack.com/builds/" +
+      process.env.BS_TESTOPS_BUILD_HASHED_ID + "</td>",
+      paths: [process.cwd() + "/report.html"],
+      recursive: true,
+      silent: true,
+  });
+
+  console.log('report built');
+});
 
 test('BStackDemo test add to cart', async ({ page }) => {
   // visit the site
