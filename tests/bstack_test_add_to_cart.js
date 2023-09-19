@@ -3,16 +3,16 @@ const { expect } = require('@playwright/test');
 var replace = require("replace");
 
 test.afterAll(async () => {
+  var o11yUrl = 'https://observability.browserstack.com/builds/' + process.env.BS_TESTOPS_BUILD_HASHED_ID;
   replace({
-      regex: "<a href=\"\">Link</a>",
-      replacement: "<a href =\"https://observability.browserstack.com/builds/\"" +
-      process.env.BS_TESTOPS_BUILD_HASHED_ID + ">Link</a>",
+      regex: "my_link",
+      replacement: o11yUrl,
       paths: [process.cwd() + "/report.html"],
       recursive: true,
       silent: true,
   });
 
-  console.log('report built');
+  console.log('report built: ' + o11yUrl);
 });
 
 test('BStackDemo test add to cart', async ({ page }) => {

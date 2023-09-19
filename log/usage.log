@@ -61,3 +61,84 @@
 2023-09-19 11:13:10 - [32minfo[39m: View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/cb085782ff389eebe695118e650a719a814f1db9
 2023-09-19 11:13:10 - [32minfo[39m: Deleting /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright-browserstack-sdk.config.js
 2023-09-19 11:13:15 - [32minfo[39m: Local binary stopped
+2023-09-19 11:29:57 - [32minfo[39m: Reading configs from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/browserstack.yml
+2023-09-19 11:30:04 - [32minfo[39m: Local binary started successfully
+2023-09-19 11:30:05 - [32minfo[39m: Getting your playwright config from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright.config.js
+2023-09-19 11:30:05 - [32minfo[39m: Adding browserstack configs to setup for Observability
+2023-09-19 11:30:47 - [32minfo[39m: Visit https://observability.browserstack.com/builds/lpuit80ymisw4vxrgviwaxrz3eg8t2kwmyc3jgld to view build report, insights, and many more debugging information all at one place!
+
+2023-09-19 11:30:47 - [32minfo[39m: View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/131d87279c36fc99d95e9551e4ca6b03409d2ea8
+2023-09-19 11:30:47 - [32minfo[39m: Deleting /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright-browserstack-sdk.config.js
+2023-09-19 11:30:52 - [32minfo[39m: Local binary stopped
+2023-09-19 11:31:08 - [32minfo[39m: Reading configs from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/browserstack.yml
+2023-09-19 11:31:15 - [32minfo[39m: Local binary started successfully
+2023-09-19 11:31:16 - [32minfo[39m: Getting your playwright config from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright.config.js
+2023-09-19 11:31:16 - [32minfo[39m: Adding browserstack configs to setup for Observability
+2023-09-19 11:31:48 - [32minfo[39m: Visit https://observability.browserstack.com/builds/u67op2poce7ozok3f8rewdf1xj8s7y12eyzvxyyl to view build report, insights, and many more debugging information all at one place!
+
+2023-09-19 11:31:48 - [32minfo[39m: View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/bca9fc1ba84a601ed982da5b2869d8ff28bc1d61
+2023-09-19 11:31:48 - [32minfo[39m: Deleting /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright-browserstack-sdk.config.js
+2023-09-19 11:31:48 - [32minfo[39m: Local binary stopped
+2023-09-19 11:31:57 - [32minfo[39m: Reading configs from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/browserstack.yml
+2023-09-19 11:32:03 - [32minfo[39m: Local binary started successfully
+2023-09-19 11:32:04 - [32minfo[39m: Getting your playwright config from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright.config.js
+2023-09-19 11:32:04 - [32minfo[39m: Adding browserstack configs to setup for Observability
+2023-09-19 11:32:38 - [32minfo[39m: Visit https://observability.browserstack.com/builds/veycvu7hgcbzvulajhvmmwomcjhclypsbf3wywpr to view build report, insights, and many more debugging information all at one place!
+
+2023-09-19 11:32:38 - [32minfo[39m: View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/ca291efceac479dac94b2b274f55bd3b15c7fb79
+2023-09-19 11:32:39 - [32minfo[39m: Deleting /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright-browserstack-sdk.config.js
+2023-09-19 11:32:43 - [32minfo[39m: Local binary stopped
+2023-09-19 11:32:59 - [32minfo[39m: Reading configs from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/browserstack.yml
+2023-09-19 11:33:06 - [32minfo[39m: Local binary started successfully
+2023-09-19 11:33:07 - [32minfo[39m: Getting your playwright config from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright.config.js
+2023-09-19 11:33:07 - [32minfo[39m: Adding browserstack configs to setup for Observability
+2023-09-19 11:33:52 - [32minfo[39m: Visit https://observability.browserstack.com/builds/ncipchkxgeaalktmazz0zyd4xn3gdshgvtneravh to view build report, insights, and many more debugging information all at one place!
+
+2023-09-19 11:33:52 - [32minfo[39m: View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/20dc8e894aa88474465d18e60a3cc7ed7a3516b7
+2023-09-19 11:33:52 - [32minfo[39m: Deleting /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright-browserstack-sdk.config.js
+2023-09-19 11:33:57 - [32minfo[39m: Local binary stopped
+2023-09-19 11:48:23 - [32minfo[39m: Reading configs from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/browserstack.yml
+2023-09-19 11:48:29 - [32minfo[39m: Local binary started successfully
+2023-09-19 11:48:31 - [32minfo[39m: Getting your playwright config from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright.config.js
+2023-09-19 11:48:31 - [32minfo[39m: Adding browserstack configs to setup for Observability
+2023-09-19 11:49:12 - [32minfo[39m: Visit https://observability.browserstack.com/builds/xup1dowdcpn7vfqh6l8o7odcmnoypskqgfyi6o5b to view build report, insights, and many more debugging information all at one place!
+
+2023-09-19 11:49:12 - [32minfo[39m: View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/4de72d449ce22b95d13bd0d4ea0abcd35eac1ba4
+2023-09-19 11:49:12 - [32minfo[39m: Deleting /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright-browserstack-sdk.config.js
+2023-09-19 11:49:17 - [32minfo[39m: Local binary stopped
+2023-09-19 11:50:04 - [32minfo[39m: Reading configs from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/browserstack.yml
+2023-09-19 11:50:10 - [32minfo[39m: Local binary started successfully
+2023-09-19 11:50:11 - [32minfo[39m: Getting your playwright config from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright.config.js
+2023-09-19 11:50:11 - [32minfo[39m: Adding browserstack configs to setup for Observability
+2023-09-19 11:50:40 - [32minfo[39m: Visit https://observability.browserstack.com/builds/3zbcivhtme1kmzxz5st7epu7c9427cesgbfie6wi to view build report, insights, and many more debugging information all at one place!
+
+2023-09-19 11:50:41 - [32minfo[39m: View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/5edc0593284f7733a4b22ba858a3ea51b59480b6
+2023-09-19 11:50:41 - [32minfo[39m: Deleting /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright-browserstack-sdk.config.js
+2023-09-19 11:50:46 - [32minfo[39m: Local binary stopped
+2023-09-19 11:52:33 - [32minfo[39m: Reading configs from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/browserstack.yml
+2023-09-19 11:52:38 - [32minfo[39m: Local binary started successfully
+2023-09-19 11:52:39 - [32minfo[39m: Getting your playwright config from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright.config.js
+2023-09-19 11:52:39 - [32minfo[39m: Adding browserstack configs to setup for Observability
+2023-09-19 11:53:14 - [32minfo[39m: Visit https://observability.browserstack.com/builds/3cycwhnfsrkrtssoyd4gaq9bqpay54fte97hahjb to view build report, insights, and many more debugging information all at one place!
+
+2023-09-19 11:53:14 - [32minfo[39m: View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/9100f81c86cc93546689072ca8721e8158a09689
+2023-09-19 11:53:14 - [32minfo[39m: Deleting /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright-browserstack-sdk.config.js
+2023-09-19 11:53:19 - [32minfo[39m: Local binary stopped
+2023-09-19 11:53:49 - [32minfo[39m: Reading configs from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/browserstack.yml
+2023-09-19 11:53:54 - [32minfo[39m: Local binary started successfully
+2023-09-19 11:53:55 - [32minfo[39m: Getting your playwright config from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright.config.js
+2023-09-19 11:53:55 - [32minfo[39m: Adding browserstack configs to setup for Observability
+2023-09-19 11:54:20 - [32minfo[39m: Visit https://observability.browserstack.com/builds/18bywmcydhmw7qafkazzdc18c4lqapelyafxbos4 to view build report, insights, and many more debugging information all at one place!
+
+2023-09-19 11:54:20 - [32minfo[39m: View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/da7f1b4e613a024653bffe177a5cb27706cfdfc5
+2023-09-19 11:54:20 - [32minfo[39m: Deleting /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright-browserstack-sdk.config.js
+2023-09-19 11:54:25 - [32minfo[39m: Local binary stopped
+2023-09-19 11:55:30 - [32minfo[39m: Reading configs from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/browserstack.yml
+2023-09-19 11:55:35 - [32minfo[39m: Local binary started successfully
+2023-09-19 11:55:36 - [32minfo[39m: Getting your playwright config from /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright.config.js
+2023-09-19 11:55:36 - [32minfo[39m: Adding browserstack configs to setup for Observability
+2023-09-19 11:56:09 - [32minfo[39m: Visit https://observability.browserstack.com/builds/nq2ocmplibakwfy1ea4t9xgozc4zrwiahr1vqg0d to view build report, insights, and many more debugging information all at one place!
+
+2023-09-19 11:56:09 - [32minfo[39m: View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/74f1d29bd608418b49e52eef0aa9166680c479d6
+2023-09-19 11:56:09 - [32minfo[39m: Deleting /Users/garybehan/Documents/Code/Customers/Adobe Express/adobe-playwright-o11y/playwright-browserstack-sdk.config.js
+2023-09-19 11:56:14 - [32minfo[39m: Local binary stopped
