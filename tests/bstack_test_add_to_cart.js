@@ -4,9 +4,9 @@ var replace = require("replace");
 
 test.afterAll(async () => {
   replace({
-      regex: "<td></td>",
-      replacement: "<td>https://observability.browserstack.com/builds/" +
-      process.env.BS_TESTOPS_BUILD_HASHED_ID + "</td>",
+      regex: "<a href=\"\">Link</a>",
+      replacement: "<a href =\"https://observability.browserstack.com/builds/\"" +
+      process.env.BS_TESTOPS_BUILD_HASHED_ID + ">Link</a>",
       paths: [process.cwd() + "/report.html"],
       recursive: true,
       silent: true,
