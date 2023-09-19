@@ -1,0 +1,280 @@
+<div class="app-page" ng-app="clientsApp" ng-controller="ClientsCtrl">
+
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" ng-model="search">
+          <label class="mdl-textfield__label" for="sample1">Search...</label>
+        </div>
+      </div>
+  
+      <div class="mdl-cell mdl-cell--9-col">
+        <table class="mdl-data-table mdl-data-table_full mdl-js-data-table mdl-shadow--4dp">
+          <colgroup>
+            <col style="width: 1px" />
+            <col style="width: 1px" />
+            <col />
+            <col style="width: 128px" />
+            <col style="width: 128px" />
+            <col style="width: 128px" />
+          </colgroup>
+          <thead>
+            <tr>
+              <thead>
+                <tr>
+                  <th>
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                      <input type="checkbox" class="mdl-checkbox__input">
+                    </label>
+                  </th>
+                  <th>Id</th>
+                  <th class="mdl-data-table__cell--non-numeric">Name</th>
+                  <th>Age</th>
+                  <th>Percentage</th>
+                  <th class="controls mdl-data-table__cell--non-numeric">Actions</th>
+                </tr>
+              </thead>
+            </tr>
+          </thead>
+          <tbody ng-repeat="client in clients | filter:search">
+            <tr ng-if="client != activeClient">
+              <td>
+                <mdl-checkbox></mdl-checkbox>
+              </td>
+              <td>{{ client.id }}</td>
+              <td class="mdl-data-table__cell--non-numeric">{{client.name}}</td>
+              <td>{{client.age}}
+                <td>
+                  <div class="mdl-textfield mdl-js-textfield">{{client.percentage | percentage}}</td>
+                <td class="controls mdl-data-table__cell--non-numeric">
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" ng-click="edit(client)">Edit</button>
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect" ng-click="delete(client)">Delete</button>
+                </td>
+            </tr>
+            </tr>
+            <tr ng-if="client == activeClient">
+              <td>
+                <mdl-checkbox></mdl-checkbox>
+              </td>
+              <td>{{ client.id }}</td>
+              <td class="mdl-data-table__cell--non-numeric">
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" ng-model="client.name">
+                </div>
+              </td>
+              <td>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" ng-model="client.age">
+                </div>
+              </td>
+              <td>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" ng-model="client.percentage">
+                </div>
+              </td>
+              <td class="controls mdl-data-table__cell--non-numeric">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" ng-click="update(client)">Update</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+  
+        <div class="mdl-cell mdl-cell--3-col">
+          <form class="mdl-card mdl-shadow--2dp" novalidate role="form" name="clientForm">
+            <div class="mdl-card__title mdl-card--expand">
+              <h2 class="mdl-card__title-text">Create User</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" name="name" ng-model="newClient.name" required>
+                <label class="mdl-textfield__label" for="">Name:</label>
+                <span class="mdl-textfield__error" ng-show="clientForm.name.$error.required">Name is required</span>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="number" ng-model="newClient.age" name="age" required max="100" min="1">
+                <label class="mdl-textfield__label" for="">Age:</label>
+                <span class="mdl-textfield__error" ng-show="clientForm.age.$error.required">Age is required</span>
+                <span class="mdl-textfield__error" ng-show="clientForm.age.$error.integer">Age should be an integer</span>
+                <span class="mdl-textfield__error" ng-show="clientForm.age.$error.min">Age should be greater than 1</span>
+                <span class="mdl-textfield__error" ng-show="clientForm.age.$error.max">Age should be lesser than 100</span>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="number" ng-model="newClient.percentage" name="percentage" required max="1" min="0">
+                <label class="mdl-textfield__label" for="">Percentage:</label>
+                <span class="mdl-textfield__error" ng-show="clientForm.percentage.$error.required">Percentage is required</span>
+                <span class="mdl-textfield__error" ng-show="clientForm.percentage.$error.min">Percentage should be greater than 0</span>
+                <span class="mdl-textfield__error" ng-show="clientForm.percentage.$error.max">Percentage should be lesser than 1</span>
+              </div>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" ng-click="create()" ng-disabled="clientForm.$invalid">Save</buttin>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+    </div>
+
+    <style>
+        body {
+            box-sizing: border-box;
+            padding: 0 20px 20px;
+            background: #fafafa;
+            position: relative;
+        }
+
+        .mdl-data-table {
+            margin-bottom: 12px;
+        }
+
+        .mdl-data-table td {
+            padding-bottom: 12px;
+            vertical-align: middle;
+        }
+
+        .mdl-data-table_full {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .mdl-data-table .controls {
+            text-align: center;
+        }
+
+        .app-page {  
+            margin: 0 auto;
+        }
+    </style>
+
+    <script>
+        // original:
+// https://www.airpair.com/angularjs/posts/angularjs-from-prototyping-to-functional-code
+
+
+// file: scripts/app.js 
+var app = angular.module('clientsApp', []);
+
+//
+app.directive('mdlCheckbox', function ($timeout) {
+  return {
+    restrict: 'E',
+    /*scope: {
+        ngModel: '='
+    },*/
+    replace: true,
+    transclude: true,
+    template: '\
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">\
+          <input type="checkbox" class="mdl-checkbox__input">\
+        <span class="mdl-checkbox__label">{{label}}</span></label>',
+    link: function($scope, el, $attrs){
+      $scope.label = $attrs.label;
+    },
+    compile: function(){
+        return {
+          post: function postLink(scope, element){
+            $timeout(function(){
+              componentHandler.upgradeElements(element[0]);
+            }, 0);
+          }
+        };
+      },
+  }
+});
+
+// file: scripts/controllers/clientsCtrl.js
+app.controller('ClientsCtrl', function($scope, Clients) {
+
+  $scope.clients = [ 
+        { id: 1, name: 'John', age: 25, percentage: 0.3 }, 
+        { id: 2, name: 'Jane', age: 39, percentage: 0.18 }, 
+        { id: 3, name: 'Jude', age: 51, percentage: 0.54 }, 
+        { id: 4, name: 'James', age: 18, percentage: 0.32 },
+        { id: 5, name: 'John', age: 22, percentage: 0.91 } 
+    ]; 
+  
+ /* Clients.all().success(function(data) {
+     $scope.clients = data;
+  });*/
+  
+  $scope.delete = function(client) { 
+    var index = $scope.clients.indexOf(client); 
+    $scope.clients.splice(index, 1); 
+   /* return Clients.delete(client.id).success(function(data) { 
+        var index = $scope.clients.indexOf(client); 
+        $scope.clients.splice(index, 1); 
+    });*/
+  };
+  
+  $scope.create = function() { 
+    $scope.newClient.id = $scope.clients.length + 1; 
+    $scope.clients.push($scope.newClient); 
+    $scope.newClient = null; 
+    /*Clients.create($scope.newClient).success(function(data) { 
+        $scope.clients.push(data); 
+        $scope.newClient = null; 
+    }); */
+  };
+  
+  $scope.edit = function(client) {
+    $scope.activeClient = client;
+   /* return Clients.delete(client.id).success(function(data) { 
+        var index = $scope.clients.indexOf(client); 
+        $scope.clients.splice(index, 1); 
+    }); */
+  }; 
+  $scope.update = function(client) { 
+    $scope.activeClient = null;
+     /*Clients.update(client).success(function(data) { 
+        $scope.activeClient = null; 
+    });*/
+  };
+
+});
+
+
+// scripts/factories/clients.js 
+app.factory('Clients', function($http) { 
+    var BASE_URL = '/clients'; 
+    return { 
+        all: function() { 
+            return $http.get(BASE_URL); 
+        }, 
+        create: function(client) { 
+            return $http.post(BASE_URL, client); 
+        }, 
+        update: function(client) { 
+            return $http.put(BASE_URL + '/' + client.id, client); 
+        }, 
+        delete: function(id) { 
+            return $http.delete(BASE_URL + '/' + id); 
+        } 
+    }; 
+});
+
+
+// scripts/filters/percentage.js 
+app.filter('percentage', function() { 
+    return function(value) { 
+        return value * 100 + ' %'; 
+    }; 
+});
+
+
+
+// scripts/directives/integer.js
+app.directive('integer', function() { 
+    var INTEGER_REGEXP = /^\-?\d+$/; 
+    return { 
+        require: 'ngModel', 
+        link: function(scope, elm, attrs, ctrl) { 
+          ctrl.$validators.integer = function(modelValue, viewValue) { 
+            if (ctrl.$isEmpty(modelValue)) return true; 
+            if (INTEGER_REGEXP.test(viewValue)) return true; 
+            return false; 
+          }; 
+        } 
+    }; 
+});
+    </script>
