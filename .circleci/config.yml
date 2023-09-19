@@ -15,15 +15,13 @@ jobs:
           name: Run tests
 
       - store_artifacts:
-          path: /home/circleci/project/report.html
+          path: /home/circleci/project/reports/report.html
           destination: browserstack-reports
 
       - persist_to_workspace:
           root: ~/project
           paths:
             - .
-      - store_test_results:
-          path: results.xml
 
 
 workflows:

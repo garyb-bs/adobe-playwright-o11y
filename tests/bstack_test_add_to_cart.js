@@ -7,7 +7,7 @@ test.afterAll(async () => {
   replace({
       regex: "my_link",
       replacement: o11yUrl,
-      paths: [process.cwd() + "/report.html"],
+      paths: [process.cwd() + "/reports/report.html"],
       recursive: true,
       silent: true,
   });
