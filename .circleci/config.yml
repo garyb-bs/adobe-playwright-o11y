@@ -17,16 +17,16 @@ jobs:
       - run:
           name: Creating Dummy Artifacts
           command: |
-            cp /home/circleci/project/report.html > /tmp/artifact-1;
+            echo "my artifact file" > /tmp/artifact-1;
             mkdir /tmp/artifacts;
             echo "my artifact files in a dir" > /tmp/artifacts/artifact-2;
 
       - store_artifacts:
-          path: /tmp/artifact-1
+          path: /home/circleci/project/report.html
           destination: artifact-file
 
       - store_artifacts:
-          path: /tmp/artifacts
+          path: /home/circleci/project/report.html
 
       - persist_to_workspace:
           root: ~/project
