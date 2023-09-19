@@ -16,10 +16,7 @@ jobs:
 
       - store_artifacts:
           path: /home/circleci/project/report.html
-          destination: artifact-file
-
-      - store_artifacts:
-          path: /home/circleci/project/report.html
+          destination: browserstack-reports
 
       - persist_to_workspace:
           root: ~/project
