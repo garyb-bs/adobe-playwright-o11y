@@ -23,8 +23,6 @@ jobs:
           root: ~/project
           paths:
             - .
-  notify:
-    steps:
       - slack/notify:
         custom: |
           {
@@ -42,6 +40,7 @@ jobs:
             ]
           }
         event: always
+        
 workflows:
   adobe-pr-smoke-test:
     jobs:
