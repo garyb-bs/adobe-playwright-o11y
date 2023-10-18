@@ -46,9 +46,9 @@ jobs:
               }
 
 workflows:
-  adobe-pr-smoke-test:
-    jobs:
-      - test
+  # adobe-pr-smoke-test:
+  #   jobs:
+  #     - test
   
   send-notification:
     jobs:
