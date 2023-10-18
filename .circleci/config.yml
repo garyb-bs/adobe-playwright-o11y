@@ -23,7 +23,7 @@ jobs:
           root: ~/project
           paths:
             - .
-      - slack/notify:
+      - notify:
           event: always
           custom: |
             {
