@@ -49,8 +49,10 @@ workflows:
   adobe-pr-smoke-test:
     jobs:
       - test
-  
-  send-notification:
-    jobs:
-      - slack/notify:
+      - notify:
           context: slack-secrets
+  
+  # send-notification:
+  #   jobs:
+  #     - notify:
+  #         context: slack-secrets
