@@ -24,23 +24,27 @@ jobs:
           paths:
             - .
       - slack/notify:
-        custom: |
-          {
-            "blocks": [
-              {
-                "type": "section",
-                "fields": [
-                  {
-                    "type": "plain_text",
-                    "text": "*This is a text notification*",
-                    "emoji": true
+          event: always
+          custom: |
+            {
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "Current Job: $CIRCLE_JOB"
                   }
-                ]
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "Write some text here"
+                  }
+                }
+              ]
               }
-            ]
-          }
-        event: always
-        
+
 workflows:
   adobe-pr-smoke-test:
     jobs:
