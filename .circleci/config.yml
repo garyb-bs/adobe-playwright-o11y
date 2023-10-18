@@ -23,7 +23,11 @@ jobs:
           root: ~/project
           paths:
             - .
-      - notify:
+  notify:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - slack/notify:
           event: always
           custom: |
             {
@@ -49,10 +53,8 @@ workflows:
   adobe-pr-smoke-test:
     jobs:
       - test
+  
+  send-notification:
+    jobs:
       - notify:
           context: slack-secrets
-  
-  # send-notification:
-  #   jobs:
-  #     - notify:
-  #         context: slack-secrets
