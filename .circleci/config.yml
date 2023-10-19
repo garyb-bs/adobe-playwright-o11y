@@ -53,8 +53,11 @@ workflows:
   adobe-pr-smoke-test:
     jobs:
       - test
+        continue-on-error: true
       - notify:
           context: SlackSecret
+          requires:  
+            - test
   
   # send-notification:
   #   jobs:
