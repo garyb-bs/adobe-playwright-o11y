@@ -23,6 +23,7 @@ jobs:
           root: ~/project
           paths:
             - .
+      
   notify:
     docker:
       - image: cimg/base:stable
@@ -54,6 +55,7 @@ workflows:
   adobe-pr-smoke-test:
     jobs:
       - test
+        context: SlackSecret
       - notify:
           context: SlackSecret
           requires:  
