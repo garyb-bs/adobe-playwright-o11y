@@ -55,8 +55,6 @@ workflows:
       - test
       - notify:
           context: SlackSecret
-          requires:
-            - test
   
   # send-notification:
   #   jobs:
