@@ -55,7 +55,6 @@ workflows:
   adobe-pr-smoke-test:
     jobs:
       - test
-        context: SlackSecret
       - notify:
           context: SlackSecret
           requires:  
