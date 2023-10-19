@@ -50,11 +50,17 @@ jobs:
               }
 
 workflows:
-  # adobe-pr-smoke-test:
-  #   jobs:
-  #     - test
-  
-  send-notification:
+  adobe-pr-smoke-test:
     jobs:
+      - test
       - notify:
           context: SlackSecret
+          requires:
+            - test
+  
+  # send-notification:
+  #   jobs:
+  #     - notify:
+  #         context: SlackSecret
+  #         requires:
+  #           - test
