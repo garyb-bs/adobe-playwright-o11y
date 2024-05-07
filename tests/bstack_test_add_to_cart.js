@@ -2,18 +2,18 @@ const { test } = require('../fixtures');
 const { expect } = require('@playwright/test');
 var replace = require("replace");
 
-test.afterAll(async () => {
-  var o11yUrl = 'https://observability.browserstack.com/builds/' + process.env.BS_TESTOPS_BUILD_HASHED_ID;
-  replace({
-      regex: "my_link",
-      replacement: o11yUrl,
-      paths: [process.cwd() + "/reports/report.html"],
-      recursive: true,
-      silent: true,
-  });
+// test.afterAll(async () => {
+//   var o11yUrl = 'https://observability.browserstack.com/builds/' + process.env.BS_TESTOPS_BUILD_HASHED_ID;
+//   replace({
+//       regex: "my_link",
+//       replacement: o11yUrl,
+//       paths: [process.cwd() + "/reports/report.html"],
+//       recursive: true,
+//       silent: true,
+//   });
 
-  console.log('report built: ' + o11yUrl);
-});
+//   console.log('report built: ' + o11yUrl);
+// });
 
 test('BStackDemo test add to cart', async ({ page }) => {
   // visit the site
